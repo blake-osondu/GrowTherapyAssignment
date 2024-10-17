@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB82FB8D2CC1486300364C2C /* GrowTherapyProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */; };
+		DB82FB8F2CC1486300364C2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FB8E2CC1486300364C2C /* ContentView.swift */; };
+		DB82FB912CC1486400364C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB82FB902CC1486400364C2C /* Assets.xcassets */; };
+		DB82FB942CC1486400364C2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB82FB932CC1486400364C2C /* Preview Assets.xcassets */; };
+		DB82FB9F2CC1486500364C2C /* GrowTherapyProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FB9E2CC1486500364C2C /* GrowTherapyProjectTests.swift */; };
+		DB82FBA92CC1486500364C2C /* GrowTherapyProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBA82CC1486500364C2C /* GrowTherapyProjectUITests.swift */; };
+		DB82FBAB2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBAA2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB82FB9B2CC1486500364C2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB82FB812CC1486300364C2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB82FB882CC1486300364C2C;
+			remoteInfo = GrowTherapyProject;
+		};
+		DB82FBA52CC1486500364C2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB82FB812CC1486300364C2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB82FB882CC1486300364C2C;
+			remoteInfo = GrowTherapyProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB82FB892CC1486300364C2C /* GrowTherapyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrowTherapyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectApp.swift; sourceTree = "<group>"; };
+		DB82FB8E2CC1486300364C2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB82FB902CC1486400364C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB82FB932CC1486400364C2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB82FB952CC1486400364C2C /* GrowTherapyProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GrowTherapyProject.entitlements; sourceTree = "<group>"; };
+		DB82FB9A2CC1486500364C2C /* GrowTherapyProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrowTherapyProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB82FB9E2CC1486500364C2C /* GrowTherapyProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectTests.swift; sourceTree = "<group>"; };
+		DB82FBA42CC1486500364C2C /* GrowTherapyProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrowTherapyProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB82FBA82CC1486500364C2C /* GrowTherapyProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectUITests.swift; sourceTree = "<group>"; };
+		DB82FBAA2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB82FB862CC1486300364C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB82FB972CC1486500364C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB82FBA12CC1486500364C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB82FB802CC1486300364C2C = {
+			isa = PBXGroup;
+			children = (
+				DB82FB8B2CC1486300364C2C /* GrowTherapyProject */,
+				DB82FB9D2CC1486500364C2C /* GrowTherapyProjectTests */,
+				DB82FBA72CC1486500364C2C /* GrowTherapyProjectUITests */,
+				DB82FB8A2CC1486300364C2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB82FB8A2CC1486300364C2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FB892CC1486300364C2C /* GrowTherapyProject.app */,
+				DB82FB9A2CC1486500364C2C /* GrowTherapyProjectTests.xctest */,
+				DB82FBA42CC1486500364C2C /* GrowTherapyProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB82FB8B2CC1486300364C2C /* GrowTherapyProject */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */,
+				DB82FB8E2CC1486300364C2C /* ContentView.swift */,
+				DB82FB902CC1486400364C2C /* Assets.xcassets */,
+				DB82FB952CC1486400364C2C /* GrowTherapyProject.entitlements */,
+				DB82FB922CC1486400364C2C /* Preview Content */,
+			);
+			path = GrowTherapyProject;
+			sourceTree = "<group>";
+		};
+		DB82FB922CC1486400364C2C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FB932CC1486400364C2C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB82FB9D2CC1486500364C2C /* GrowTherapyProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FB9E2CC1486500364C2C /* GrowTherapyProjectTests.swift */,
+			);
+			path = GrowTherapyProjectTests;
+			sourceTree = "<group>";
+		};
+		DB82FBA72CC1486500364C2C /* GrowTherapyProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FBA82CC1486500364C2C /* GrowTherapyProjectUITests.swift */,
+				DB82FBAA2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift */,
+			);
+			path = GrowTherapyProjectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB82FB882CC1486300364C2C /* GrowTherapyProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB82FBAE2CC1486500364C2C /* Build configuration list for PBXNativeTarget "GrowTherapyProject" */;
+			buildPhases = (
+				DB82FB852CC1486300364C2C /* Sources */,
+				DB82FB862CC1486300364C2C /* Frameworks */,
+				DB82FB872CC1486300364C2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GrowTherapyProject;
+			productName = GrowTherapyProject;
+			productReference = DB82FB892CC1486300364C2C /* GrowTherapyProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB82FB992CC1486500364C2C /* GrowTherapyProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB82FBB12CC1486500364C2C /* Build configuration list for PBXNativeTarget "GrowTherapyProjectTests" */;
+			buildPhases = (
+				DB82FB962CC1486500364C2C /* Sources */,
+				DB82FB972CC1486500364C2C /* Frameworks */,
+				DB82FB982CC1486500364C2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB82FB9C2CC1486500364C2C /* PBXTargetDependency */,
+			);
+			name = GrowTherapyProjectTests;
+			productName = GrowTherapyProjectTests;
+			productReference = DB82FB9A2CC1486500364C2C /* GrowTherapyProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB82FBA32CC1486500364C2C /* GrowTherapyProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB82FBB42CC1486500364C2C /* Build configuration list for PBXNativeTarget "GrowTherapyProjectUITests" */;
+			buildPhases = (
+				DB82FBA02CC1486500364C2C /* Sources */,
+				DB82FBA12CC1486500364C2C /* Frameworks */,
+				DB82FBA22CC1486500364C2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB82FBA62CC1486500364C2C /* PBXTargetDependency */,
+			);
+			name = GrowTherapyProjectUITests;
+			productName = GrowTherapyProjectUITests;
+			productReference = DB82FBA42CC1486500364C2C /* GrowTherapyProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB82FB812CC1486300364C2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					DB82FB882CC1486300364C2C = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					DB82FB992CC1486500364C2C = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = DB82FB882CC1486300364C2C;
+					};
+					DB82FBA32CC1486500364C2C = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = DB82FB882CC1486300364C2C;
+					};
+				};
+			};
+			buildConfigurationList = DB82FB842CC1486300364C2C /* Build configuration list for PBXProject "GrowTherapyProject" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB82FB802CC1486300364C2C;
+			productRefGroup = DB82FB8A2CC1486300364C2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB82FB882CC1486300364C2C /* GrowTherapyProject */,
+				DB82FB992CC1486500364C2C /* GrowTherapyProjectTests */,
+				DB82FBA32CC1486500364C2C /* GrowTherapyProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB82FB872CC1486300364C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB82FB942CC1486400364C2C /* Preview Assets.xcassets in Resources */,
+				DB82FB912CC1486400364C2C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB82FB982CC1486500364C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB82FBA22CC1486500364C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB82FB852CC1486300364C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB82FB8F2CC1486300364C2C /* ContentView.swift in Sources */,
+				DB82FB8D2CC1486300364C2C /* GrowTherapyProjectApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB82FB962CC1486500364C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB82FB9F2CC1486500364C2C /* GrowTherapyProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB82FBA02CC1486500364C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB82FBA92CC1486500364C2C /* GrowTherapyProjectUITests.swift in Sources */,
+				DB82FBAB2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB82FB9C2CC1486500364C2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB82FB882CC1486300364C2C /* GrowTherapyProject */;
+			targetProxy = DB82FB9B2CC1486500364C2C /* PBXContainerItemProxy */;
+		};
+		DB82FBA62CC1486500364C2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB82FB882CC1486300364C2C /* GrowTherapyProject */;
+			targetProxy = DB82FBA52CC1486500364C2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DB82FBAC2CC1486500364C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB82FBAD2CC1486500364C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		DB82FBAF2CC1486500364C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GrowTherapyProject/GrowTherapyProject.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GrowTherapyProject/Preview Content\"";
+				DEVELOPMENT_TEAM = 49S85J55Z4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinnectus.GrowTherapyProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DB82FBB02CC1486500364C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GrowTherapyProject/GrowTherapyProject.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GrowTherapyProject/Preview Content\"";
+				DEVELOPMENT_TEAM = 49S85J55Z4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinnectus.GrowTherapyProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DB82FBB22CC1486500364C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49S85J55Z4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinnectus.GrowTherapyProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrowTherapyProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GrowTherapyProject";
+			};
+			name = Debug;
+		};
+		DB82FBB32CC1486500364C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49S85J55Z4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinnectus.GrowTherapyProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GrowTherapyProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GrowTherapyProject";
+			};
+			name = Release;
+		};
+		DB82FBB52CC1486500364C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49S85J55Z4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinnectus.GrowTherapyProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GrowTherapyProject;
+			};
+			name = Debug;
+		};
+		DB82FBB62CC1486500364C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49S85J55Z4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinnectus.GrowTherapyProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GrowTherapyProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB82FB842CC1486300364C2C /* Build configuration list for PBXProject "GrowTherapyProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB82FBAC2CC1486500364C2C /* Debug */,
+				DB82FBAD2CC1486500364C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB82FBAE2CC1486500364C2C /* Build configuration list for PBXNativeTarget "GrowTherapyProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB82FBAF2CC1486500364C2C /* Debug */,
+				DB82FBB02CC1486500364C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB82FBB12CC1486500364C2C /* Build configuration list for PBXNativeTarget "GrowTherapyProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB82FBB22CC1486500364C2C /* Debug */,
+				DB82FBB32CC1486500364C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB82FBB42CC1486500364C2C /* Build configuration list for PBXNativeTarget "GrowTherapyProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB82FBB52CC1486500364C2C /* Debug */,
+				DB82FBB62CC1486500364C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB82FB812CC1486300364C2C /* Project object */;
+}
