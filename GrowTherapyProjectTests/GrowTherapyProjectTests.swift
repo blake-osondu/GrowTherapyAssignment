@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import GrowTherapyProject
+
 
 final class GrowTherapyProjectTests: XCTestCase {
 

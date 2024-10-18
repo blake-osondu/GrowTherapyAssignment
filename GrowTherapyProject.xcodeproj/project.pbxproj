@@ -14,6 +14,18 @@
 		DB82FB9F2CC1486500364C2C /* GrowTherapyProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FB9E2CC1486500364C2C /* GrowTherapyProjectTests.swift */; };
 		DB82FBA92CC1486500364C2C /* GrowTherapyProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBA82CC1486500364C2C /* GrowTherapyProjectUITests.swift */; };
 		DB82FBAB2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBAA2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift */; };
+		DB82FBB92CC148E200364C2C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DB82FBB82CC148E200364C2C /* ComposableArchitecture */; };
+		DB82FBBB2CC14A9200364C2C /* ScheduleFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBBA2CC14A9200364C2C /* ScheduleFeature.swift */; };
+		DB82FBBD2CC14AC700364C2C /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBBC2CC14AC700364C2C /* AppFeature.swift */; };
+		DB82FBC12CC14DBE00364C2C /* SessionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBC02CC14DBE00364C2C /* SessionFeature.swift */; };
+		DB82FBC32CC1F5CB00364C2C /* ExerciseFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBC22CC1F5CB00364C2C /* ExerciseFeature.swift */; };
+		DB82FBC52CC1F5D800364C2C /* WaitingRoomFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBC42CC1F5D800364C2C /* WaitingRoomFeature.swift */; };
+		DB82FBC92CC1F5E700364C2C /* MoodLogFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBC82CC1F5E700364C2C /* MoodLogFeature.swift */; };
+		DB82FBCB2CC1F6B400364C2C /* TaskFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBCA2CC1F6B400364C2C /* TaskFeature.swift */; };
+		DB82FBCD2CC1F81200364C2C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBCC2CC1F81200364C2C /* NetworkClient.swift */; };
+		DB82FBCF2CC2AF3F00364C2C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBCE2CC2AF3F00364C2C /* Models.swift */; };
+		DB82FBD12CC2AF4C00364C2C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBD02CC2AF4C00364C2C /* Utilities.swift */; };
+		DB82FBD32CC2AFF900364C2C /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBD22CC2AFF900364C2C /* ScheduleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +57,17 @@
 		DB82FBA42CC1486500364C2C /* GrowTherapyProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GrowTherapyProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB82FBA82CC1486500364C2C /* GrowTherapyProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectUITests.swift; sourceTree = "<group>"; };
 		DB82FBAA2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB82FBBA2CC14A9200364C2C /* ScheduleFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFeature.swift; sourceTree = "<group>"; };
+		DB82FBBC2CC14AC700364C2C /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
+		DB82FBC02CC14DBE00364C2C /* SessionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFeature.swift; sourceTree = "<group>"; };
+		DB82FBC22CC1F5CB00364C2C /* ExerciseFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFeature.swift; sourceTree = "<group>"; };
+		DB82FBC42CC1F5D800364C2C /* WaitingRoomFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomFeature.swift; sourceTree = "<group>"; };
+		DB82FBC82CC1F5E700364C2C /* MoodLogFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLogFeature.swift; sourceTree = "<group>"; };
+		DB82FBCA2CC1F6B400364C2C /* TaskFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFeature.swift; sourceTree = "<group>"; };
+		DB82FBCC2CC1F81200364C2C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		DB82FBCE2CC2AF3F00364C2C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		DB82FBD02CC2AF4C00364C2C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		DB82FBD22CC2AFF900364C2C /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB82FBB92CC148E200364C2C /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +120,18 @@
 			isa = PBXGroup;
 			children = (
 				DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */,
+				DB82FBCC2CC1F81200364C2C /* NetworkClient.swift */,
 				DB82FB8E2CC1486300364C2C /* ContentView.swift */,
+				DB82FBBC2CC14AC700364C2C /* AppFeature.swift */,
+				DB82FBBA2CC14A9200364C2C /* ScheduleFeature.swift */,
+				DB82FBD22CC2AFF900364C2C /* ScheduleView.swift */,
+				DB82FBC02CC14DBE00364C2C /* SessionFeature.swift */,
+				DB82FBC22CC1F5CB00364C2C /* ExerciseFeature.swift */,
+				DB82FBC42CC1F5D800364C2C /* WaitingRoomFeature.swift */,
+				DB82FBCE2CC2AF3F00364C2C /* Models.swift */,
+				DB82FBC82CC1F5E700364C2C /* MoodLogFeature.swift */,
+				DB82FBCA2CC1F6B400364C2C /* TaskFeature.swift */,
+				DB82FBD02CC2AF4C00364C2C /* Utilities.swift */,
 				DB82FB902CC1486400364C2C /* Assets.xcassets */,
 				DB82FB952CC1486400364C2C /* GrowTherapyProject.entitlements */,
 				DB82FB922CC1486400364C2C /* Preview Content */,
@@ -145,6 +180,9 @@
 			dependencies = (
 			);
 			name = GrowTherapyProject;
+			packageProductDependencies = (
+				DB82FBB82CC148E200364C2C /* ComposableArchitecture */,
+			);
 			productName = GrowTherapyProject;
 			productReference = DB82FB892CC1486300364C2C /* GrowTherapyProject.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +255,9 @@
 				Base,
 			);
 			mainGroup = DB82FB802CC1486300364C2C;
+			packageReferences = (
+				DB82FBB72CC148E200364C2C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = DB82FB8A2CC1486300364C2C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +300,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB82FBCF2CC2AF3F00364C2C /* Models.swift in Sources */,
+				DB82FBBD2CC14AC700364C2C /* AppFeature.swift in Sources */,
+				DB82FBCD2CC1F81200364C2C /* NetworkClient.swift in Sources */,
 				DB82FB8F2CC1486300364C2C /* ContentView.swift in Sources */,
+				DB82FBC12CC14DBE00364C2C /* SessionFeature.swift in Sources */,
+				DB82FBC52CC1F5D800364C2C /* WaitingRoomFeature.swift in Sources */,
+				DB82FBD12CC2AF4C00364C2C /* Utilities.swift in Sources */,
+				DB82FBC92CC1F5E700364C2C /* MoodLogFeature.swift in Sources */,
 				DB82FB8D2CC1486300364C2C /* GrowTherapyProjectApp.swift in Sources */,
+				DB82FBC32CC1F5CB00364C2C /* ExerciseFeature.swift in Sources */,
+				DB82FBBB2CC14A9200364C2C /* ScheduleFeature.swift in Sources */,
+				DB82FBD32CC2AFF900364C2C /* ScheduleView.swift in Sources */,
+				DB82FBCB2CC1F6B400364C2C /* TaskFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +406,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -410,7 +462,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -437,8 +489,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinnectus.GrowTherapyProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -464,8 +519,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinnectus.GrowTherapyProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -581,6 +639,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB82FBB72CC148E200364C2C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = exactVersion;
+				version = 1.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB82FBB82CC148E200364C2C /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB82FBB72CC148E200364C2C /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB82FB812CC1486300364C2C /* Project object */;
 }
