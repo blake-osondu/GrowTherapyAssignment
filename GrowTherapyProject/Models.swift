@@ -8,13 +8,13 @@
 import Foundation
 
 
-enum TaskStatus {
+enum AssignmentStatus {
     case completed
     case notCompleted
     case notAvailable
 }
 
-struct Task: Equatable, Codable, Identifiable {
+struct Assignment: Equatable, Codable, Identifiable {
     var id: String
     var dateAssigned: Date
     var exercise: Breathwork

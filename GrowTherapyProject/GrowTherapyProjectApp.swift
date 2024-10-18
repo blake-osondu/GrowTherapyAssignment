@@ -11,7 +11,9 @@ import SwiftUI
 struct GrowTherapyProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ScheduleView(store: .init(initialState: ScheduleFeature.State(), reducer: {
+                ScheduleFeature()
+            }))
         }
     }
 }

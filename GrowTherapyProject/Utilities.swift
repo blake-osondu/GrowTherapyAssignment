@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-func taskStatus(isCompleted: Bool, isUnlocked: Bool) -> TaskStatus {
+func assignmentStatus(isCompleted: Bool, isUnlocked: Bool) -> AssignmentStatus {
     switch (isCompleted, isUnlocked) {
     case (true, _):
         return .completed
@@ -19,7 +19,7 @@ func taskStatus(isCompleted: Bool, isUnlocked: Bool) -> TaskStatus {
     }
 }
 
-func taskStatusImage(_ status: TaskStatus) -> String {
+func assignmentStatusImage(_ status: AssignmentStatus) -> String {
     switch status {
     case .completed:
         return "checkmark.seal.fill"
@@ -30,7 +30,7 @@ func taskStatusImage(_ status: TaskStatus) -> String {
     }
 }
 
-func taskDateDescription( isCompleted: Bool, _ date: Date) -> String {
+func assignmentDateDescription( isCompleted: Bool, _ date: Date) -> String {
     let components = Calendar.current.dateComponents([.month, .day], from: date)
 
     if let monthIndex = components.month, let day = components.day {
@@ -45,7 +45,7 @@ func taskDateDescription( isCompleted: Bool, _ date: Date) -> String {
     return date.description
 }
 
-func taskStatusColor(_ status: TaskStatus) -> Color {
+func assignmentStatusColor(_ status: AssignmentStatus) -> Color {
     switch status {
     case .completed:
         return Color.appLightPurple
@@ -61,8 +61,9 @@ extension Color {
     static let appLightGray = Color(uiColor: UIColor(red: 179/255, green: 179/255, blue: 179/255, alpha: 1))
     static let appBlack = Color(uiColor: UIColor(red: 51/255, green: 56/255, blue: 52/255, alpha: 1))
     static let appLightGreen = Color(uiColor: UIColor(red: 215/255, green: 240/255, blue: 190/255, alpha: 1))
+    static let appLightBeige =  Color(uiColor: UIColor(red: 253/255, green: 249/255, blue: 238/255, alpha: 1.0))
 }
 
-func taskTitleColor(_ status: TaskStatus) -> Color {
+func assignmentTitleColor(_ status: AssignmentStatus) -> Color {
     status == .notAvailable ? Color.appLightGray : Color.appBlack
 }

@@ -14,7 +14,7 @@ struct ScheduleView: View {
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             ZStack {
-                Color(uiColor: UIColor(red: 253/255, green: 249/255, blue: 238/255, alpha: 1.0)).edgesIgnoringSafeArea(.all)
+                Color.appLightBeige.edgesIgnoringSafeArea(.all)
                 VStack {
                     Spacer().frame(height: 20)
                     Text("My Tasks")
@@ -22,12 +22,12 @@ struct ScheduleView: View {
                         .bold()
                     Spacer().frame(height: 40)
                     ScrollView {
-                        ForEach(viewStore.tasks) { task in
-                            TaskRow(
-                                date: task.dateAssigned,
-                                status: taskStatus(isCompleted: task.isCompleted,
-                                                   isUnlocked: task.isScheduleUnlocked)) {
-                                                       viewStore.send(.selectTask(task))
+                        ForEach(viewStore.assignments) { assignment in
+                            AssignmentRow(
+                                date: assignment.dateAssigned,
+                                status: assignmentStatus(isCompleted: assignment.isCompleted,
+                                                   isUnlocked: assignment.isScheduleUnlocked)) {
+                                                       viewStore.send(.selectAssignment(assignment))
                                                    }
                                                    .padding(.horizontal, 16)
                                                    .padding(.vertical, 2)
@@ -43,22 +43,22 @@ struct ScheduleView: View {
     }
 }
 
-struct TaskRow: View {
+struct AssignmentRow: View {
    
     let date: Date
-    let status: TaskStatus
+    let status: AssignmentStatus
     let onSelect: () -> Void
     
     var body: some View {
         
         Button(action: onSelect, label: {
             HStack {
-                Text(taskDateDescription(isCompleted: status == .completed, date))
-                    .foregroundStyle(taskTitleColor(status))
+                Text(assignmentDateDescription(isCompleted: status == .completed, date))
+                    .foregroundStyle(assignmentTitleColor(status))
                     .padding(.horizontal)
                 Spacer()
-                Image(systemName: taskStatusImage(status))
-                    .foregroundColor(taskStatusColor(status))
+                Image(systemName: assignmentStatusImage(status))
+                    .foregroundColor(assignmentStatusColor(status))
                     .padding(.horizontal)
             }.frame(height: 55)
         })
@@ -79,4 +79,4 @@ struct TaskRow: View {
     
 }
 
-#warning("Should the task be locked if it was scheduled in the past and was not completed. Should it even appear if it was in the past and not completed")
+#warning("Should the assignment be locked if it was scheduled in the past and was not completed. Should it even appear if it was in the past and not completed")

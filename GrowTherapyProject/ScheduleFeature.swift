@@ -14,17 +14,17 @@ struct ScheduleFeature {
     
     @ObservableState
     struct State: Equatable {
-        var tasks: [Task] = []
-        @Presents var selectedTask: TaskFeature.State?
+        var assignments: [Assignment] = []
+        @Presents var selectedAssignment: AssignmentFeature.State?
     }
     
     enum Action: Equatable {
         case didAppear
-        case fetchTasks
-        case retrievedTasks([Task])
-        case failedToRetrieveTasks
-        case selectTask(Task)
-        case selectedTask(TaskFeature.Action)
+        case fetchAssignments
+        case retrievedAssignments([Assignment])
+        case failedToRetrieveAssignments
+        case selectAssignment(Assignment)
+        case selectedAssignment(AssignmentFeature.Action)
     }
     
     @Dependency(\.networkClient) var networkClient
@@ -33,33 +33,33 @@ struct ScheduleFeature {
         Reduce { state, action in
             switch action {
             case .didAppear:
-                return .send(.fetchTasks)
-            case .fetchTasks:
+                return .send(.fetchAssignments)
+            case .fetchAssignments:
                 return .run { send in
                     do {
-                        let tasks = try await networkClient.fetchTasks()
-                        await send(.retrievedTasks(tasks))
+                        let assignments = try await networkClient.fetchAssignments()
+                        await send(.retrievedAssignments(assignments))
                     } catch {
-                        await send(.failedToRetrieveTasks)
+                        await send(.failedToRetrieveAssignments)
                     }
                 }
                 
-            case .retrievedTasks(let tasks):
-                state.tasks = tasks
+            case .retrievedAssignments(let assignments):
+                state.assignments = assignments
                 return .none
                 
-            case .failedToRetrieveTasks:
+            case .failedToRetrieveAssignments:
                 return .none
             
-            case .selectTask(let task):
-                state.selectedTask = TaskFeature.State(task: task)
+            case .selectAssignment(let assignment):
+                state.selectedAssignment = AssignmentFeature.State(assignment: assignment)
                 return .none
                 
             default:
                 return .none
             }
-        }.ifLet(\.selectedTask, action: \.selectedTask) {
-            TaskFeature()
+        }.ifLet(\.selectedAssignment, action: \.selectedAssignment) {
+            AssignmentFeature()
         }
     }
 }

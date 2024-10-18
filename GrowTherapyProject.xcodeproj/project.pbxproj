@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DB82FB8D2CC1486300364C2C /* GrowTherapyProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */; };
-		DB82FB8F2CC1486300364C2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FB8E2CC1486300364C2C /* ContentView.swift */; };
 		DB82FB912CC1486400364C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB82FB902CC1486400364C2C /* Assets.xcassets */; };
 		DB82FB942CC1486400364C2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB82FB932CC1486400364C2C /* Preview Assets.xcassets */; };
 		DB82FB9F2CC1486500364C2C /* GrowTherapyProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FB9E2CC1486500364C2C /* GrowTherapyProjectTests.swift */; };
@@ -16,7 +15,6 @@
 		DB82FBAB2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBAA2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift */; };
 		DB82FBB92CC148E200364C2C /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DB82FBB82CC148E200364C2C /* ComposableArchitecture */; };
 		DB82FBBB2CC14A9200364C2C /* ScheduleFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBBA2CC14A9200364C2C /* ScheduleFeature.swift */; };
-		DB82FBBD2CC14AC700364C2C /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBBC2CC14AC700364C2C /* AppFeature.swift */; };
 		DB82FBC12CC14DBE00364C2C /* SessionFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBC02CC14DBE00364C2C /* SessionFeature.swift */; };
 		DB82FBC32CC1F5CB00364C2C /* ExerciseFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBC22CC1F5CB00364C2C /* ExerciseFeature.swift */; };
 		DB82FBC52CC1F5D800364C2C /* WaitingRoomFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBC42CC1F5D800364C2C /* WaitingRoomFeature.swift */; };
@@ -48,7 +46,6 @@
 /* Begin PBXFileReference section */
 		DB82FB892CC1486300364C2C /* GrowTherapyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrowTherapyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectApp.swift; sourceTree = "<group>"; };
-		DB82FB8E2CC1486300364C2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB82FB902CC1486400364C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB82FB932CC1486400364C2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB82FB952CC1486400364C2C /* GrowTherapyProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GrowTherapyProject.entitlements; sourceTree = "<group>"; };
@@ -58,7 +55,6 @@
 		DB82FBA82CC1486500364C2C /* GrowTherapyProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectUITests.swift; sourceTree = "<group>"; };
 		DB82FBAA2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DB82FBBA2CC14A9200364C2C /* ScheduleFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFeature.swift; sourceTree = "<group>"; };
-		DB82FBBC2CC14AC700364C2C /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 		DB82FBC02CC14DBE00364C2C /* SessionFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionFeature.swift; sourceTree = "<group>"; };
 		DB82FBC22CC1F5CB00364C2C /* ExerciseFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFeature.swift; sourceTree = "<group>"; };
 		DB82FBC42CC1F5D800364C2C /* WaitingRoomFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomFeature.swift; sourceTree = "<group>"; };
@@ -121,8 +117,6 @@
 			children = (
 				DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */,
 				DB82FBCC2CC1F81200364C2C /* NetworkClient.swift */,
-				DB82FB8E2CC1486300364C2C /* ContentView.swift */,
-				DB82FBBC2CC14AC700364C2C /* AppFeature.swift */,
 				DB82FBBA2CC14A9200364C2C /* ScheduleFeature.swift */,
 				DB82FBD22CC2AFF900364C2C /* ScheduleView.swift */,
 				DB82FBC02CC14DBE00364C2C /* SessionFeature.swift */,
@@ -301,9 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB82FBCF2CC2AF3F00364C2C /* Models.swift in Sources */,
-				DB82FBBD2CC14AC700364C2C /* AppFeature.swift in Sources */,
 				DB82FBCD2CC1F81200364C2C /* NetworkClient.swift in Sources */,
-				DB82FB8F2CC1486300364C2C /* ContentView.swift in Sources */,
 				DB82FBC12CC14DBE00364C2C /* SessionFeature.swift in Sources */,
 				DB82FBC52CC1F5D800364C2C /* WaitingRoomFeature.swift in Sources */,
 				DB82FBD12CC2AF4C00364C2C /* Utilities.swift in Sources */,

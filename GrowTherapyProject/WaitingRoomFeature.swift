@@ -6,3 +6,23 @@
 //
 
 import Foundation
+import ComposableArchitecture
+
+@Reducer
+struct WaitRoomFeature {
+    
+    @ObservableState
+    struct State: Equatable {
+    
+    }
+    
+    enum Action: Equatable {
+        
+    }
+    
+    var body: some Reducer<State,Action> {
+        Reduce { state, action in
+            return .none
+        }
+    }
+}
