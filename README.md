@@ -1,93 +1,60 @@
-Grow Therapy Project 
-
-by Blake Rogers
-
+Grow Therapy Assignment
 
 Features
 
 List of Tasks
-    When the client logs on they will see a list of tasks assigned to their account
-    Upcoming tasks are locked
-    Only the task for the current day is availble for selection
-    Past completed tasks display the mood log by the client at the end of the session
-    For convenience of testing the response of tasks has been altered so that one task within the next several days is viable for selection.
-    When the client selects an assignment they are directed to the assignment view where they will enter the exercise section to begin their assigned exercise prior to meeting with the provider.
-    If the client selects and the immediate fetch of the section discovers that the therapist is already in the session the client will be directed to the session instead to begin the meeting.
-    
+- Upon login, clients are presented with a list of tasks (referred to as "assignments") assigned to their account.
+- Future tasks are locked, while only the task for the current day is available for selection.
+- Completed tasks display the mood log submitted by the client at the end of the session.
+- For testing purposes, one task within the next few days is made available for selection.
+- Selecting an assignment takes the client to the assignment view, where they can begin the assigned exercise before meeting the provider.
+- If the therapist is already in the session when the assignment is selected, the client is redirected to the session to begin the meeting.
+
 Exercise
-    
-    The client will see the instructions for the exercise.
-    The client may tap on any part of the screen to begin the excercise
-    The breathing animation will begin
-    The client may tap on any part of the screen to pause the exercise
-    If the response of the shared session is retrieved and the therapist is in the session the
-    prompt to join the session will be displayed if the user is actively doing the exercise
-    When the exercise is completed the user will be directed to the wait room
-    
-    
-Waitroom
+- Clients see the instructions for the exercise and can tap anywhere on the screen to start the exercise.
+- A breathing animation plays, and the client can pause the exercise by tapping again.
+- If the system detects that the therapist is in the session during the exercise, the client is prompted to join the session.
+- Upon completion of the exercise, the client is directed to the waiting room.
 
-    When the client is directed to the wait the may merely wait for the provider
-    A prompt will appear to allow client to join session when the provider is available
-    For convenience of testing in the SessionClient file in the observeSessionFunction adjust the simulated
-    wait time to return the observed Session sooner or later to see the change on the state of the Exercise or wait room for the provider available prompt
-    When the client selects the prompt to join they are directed to the session
-    
+Waiting Room
+- Clients wait for the provider in the waiting room. When the provider becomes available, a prompt allows the client to join the session.
+- For testing, you can modify the simulated wait time in the `SessionClient` file within the `observeSessionFunction` to trigger the session availability prompt sooner or later.
+- When the prompt is selected, the client is directed to the session.
+
 Session
-    The client is in the session and may exit at any time
-    Once the client selects exit they will be directed to the mood log
+- Clients can join the session and exit at any time. Upon exit, they are directed to complete a mood log.
 
-MoodLog
-    
-    The client may select a mood that they have been feeling generally throughout the week
-    The assignment will be updated from the mood log and updated for completion for exercise and moodlog
-    
-    
-    
-    
-    
-    
-    
-    
-    
+Mood Log
+- Clients can select a mood they have generally experienced throughout the week.
+- The assignment is marked complete after the mood log is submitted, covering both the exercise and mood log components.
+
+---
+
 Architectural Decisions
 
-    Utilizing the Composable Architecture Design Pattern for its built in handling or 
-    state management within SwiftUI in a declarative manner, refined testing framework, and ergonomics
-    for an appplications dependencies both external and internal
-    
-    Instead of referring to the clients tasks as tasks they have been referred to as Assignments due to the conflicting naming convention between the inherent concurrency object of the same name.
-    
-    In the schedule view an an initial is called to fetch all of the assignments the user owns
-    When the user returns to the schedule view after the completion of a session the assignments is updated
-    This was done so that every view of the assignments is the latest result restored remotely
-    
-    I added a session id on the Assignemnt(Task) although only the exercise, date assigned, and mood were provided as required valuse
-   
-    This was done so that Sessions could be a complete model that is searchable and mutable. I assumed that the client would need to continually observe some remote value relative to the assignment they were in much like is done for chat features on typical applications with a chat or meeting feature.
-    In this way both the client and the provider could retain a reference to the session.
-    
-    When the assignment is opened the session is observed for changes on the backend by referencing the session via the id. When the provider joins shared session is updated. (isTherapistInSession) which will trigger an observation stream on the client end.
-    
-    A notification could be utilized as well but I felt a live observation would be more reliable in that a user may choose to not allow notifications.
-    
-    By this way the Exercise and Waitroom feaetures did not require any network capability as they would be updated by the parent when the relevant Session was updated
-    
-    The MoodLog was enabled with a network capability to update the assignment. Since the MoodLog feature was implemented such that it was a requirement after the session, the Moodlog was made a child module of the SessionFeature and the assignment id passed through from the parent AssignmentFeature.
-    
-    For the convenience of testing the action to completed the mood save log was "fedback" to the parent assignment feature to update the list of assignments currently displayed in the app session for continuity.
-    
-    Possible Improvements
-        A profile page for the client
-        A separate page for the current or upcoming tasks and those that have been completed
-        A feature to allow the client and/or the provider to add notes to the session after the session is completed. 
-        A feature that would allow the provider to add talking points to discuss for the next session
-        A companion provider application that will get the provider some private tools to assist the client
-        A feedback feature for the client and/or therapist to note if the the client/therapist is inappropriate or is enjoyable to work with.
-        A back button that will allow the client to back out of the any part of the application while retaining any completed status for assignment.
-        Handling of error case when tasks are not fetched from remote server initially
-        Instructions for the exercise could be more clear
-        A reset feature on the breathing exercise to restart the breathing exercise if the client desires
-        to start over or do it again.
-        Instead of automatically navigating the user to the waiting give them a prompt to navigate to the wait room instead.
-        Add feature to allow client to take notes prior to session beginning in the wait room or play a calming game
+- I used the **Composable Architecture Design Pattern** for its state management capabilities in SwiftUI, its robust testing framework, and its handling of external and internal dependencies.
+- Assignments were referred to as such (instead of "tasks") to avoid conflicts with Swift's concurrency model.
+- In the schedule view, an initial call fetches all assignments owned by the user. After completing a session, the assignments list is updated to reflect the latest remote data.
+- I added a `sessionId` to the assignment model (in addition to exercise, date assigned, and mood) to allow for a more complete and mutable session model. This lets both the client and provider reference the same session object.
+- Sessions are observed in real-time for changes on the backend via the `sessionId`. When a provider joins a session, the shared session is updated (e.g., `isTherapistInSession`), triggering an observation stream for the client.
+- A live observation was favored over push notifications since users may opt-out of notifications, ensuring better reliability.
+- Both the Exercise and Waiting Room features are updated based on changes in the parent session without needing additional network calls.
+- The Mood Log utilizes network capabilities to update the assignment. Since it is required post-session, it was implemented as a child module of the `SessionFeature` and passed the assignment ID from the `AssignmentFeature`.
+- For testing, completing the mood log "feeds back" into the parent assignment feature, updating the list of assignments displayed in the app.
+
+---
+
+Potential Improvements
+- Add a profile page for the client.
+- Separate completed and upcoming assignments into different views.
+- Allow clients and providers to add notes after the session.
+- Add a feature for providers to note talking points for the next session.
+- Develop a companion provider app with private tools for assisting clients.
+- Implement feedback features for both clients and therapists to report issues or praise.
+- Add a back button to allow clients to exit any part of the app while retaining progress.
+- Handle errors when tasks fail to fetch from the remote server.
+- Clarify exercise instructions.
+- Add a reset button to restart the breathing exercise.
+- Offer a prompt to navigate to the waiting room, instead of automatic navigation.
+- Allow clients to take notes or play a calming game while waiting for the session to start.
+
