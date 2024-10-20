@@ -11,7 +11,6 @@ import Dependencies
 
 struct NetworkClient {
     let fetchAssignments: @Sendable () async throws -> [Assignment]
-    let observeIsTherapistInSession: @Sendable (String) async throws -> Bool
     let completeAssignment: @Sendable (Assignment) async throws -> Assignment
     let saveMood: @Sendable (String, Mood) async throws -> Void
 }
@@ -28,9 +27,6 @@ extension NetworkClient: DependencyKey {
             } catch {
                 return []
             }
-        }, observeIsTherapistInSession: { sessionId in
-            //Use URLSession to observe change on backend session
-            false
         }, completeAssignment: { assignment in
             //Use URLSession to send assignment
             Assignment(
@@ -38,6 +34,7 @@ extension NetworkClient: DependencyKey {
                 dateAssigned: assignment.dateAssigned,
                 exercise: assignment.exercise,
                 sessionId: assignment.sessionId,
+                cooldown: assignment.cooldown,
                 isCompleted: true)
         }, saveMood: { assignmentId, mood in
             //Use URLSession to log mood on assignment
@@ -75,30 +72,29 @@ extension NetworkClient: TestDependencyKey {
                  dateAssigned: Date().addingTimeInterval(3600 * 24 * -1),
                  exercise: .init(breathCountRequired: 12),
                  sessionId: UUID().uuidString,
+                cooldown: .init(isCompleted: true, log: .happy),
                  isCompleted: true),
             Assignment(id: UUID().uuidString,
                  dateAssigned: Date().addingTimeInterval(3600 * 24 * -2),
                  exercise: .init(breathCountRequired: 12),
                  sessionId: UUID().uuidString,
+                       cooldown: .init(isCompleted: true, log: .content),
                  isCompleted: true),
             Assignment(id: UUID().uuidString,
                  dateAssigned: Date().addingTimeInterval(3600 * 24 * -3),
                  exercise: .init(breathCountRequired: 12),
                  sessionId: UUID().uuidString,
+                       cooldown: .init(isCompleted: true, log: .frustrated),
                  isCompleted: true)
             
         ]
-    }, observeIsTherapistInSession:  { id in
-        _ = try await Task.sleep(nanoseconds: 10000)
-        return try await withCheckedThrowingContinuation { continuation in
-            continuation.resume(with: .success(true))
-        }
     }, completeAssignment: { assignment in
         Assignment(
             id: assignment.id,
             dateAssigned: assignment.dateAssigned,
             exercise: assignment.exercise,
             sessionId: assignment.sessionId,
+            cooldown: assignment.cooldown,
             isCompleted: true)
     }, saveMood: { assignmentId, mood in
         //Throw error if desired for testing

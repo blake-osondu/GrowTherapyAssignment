@@ -25,7 +25,7 @@ struct MoodLogFeature {
         case didSelectMood(Mood)
         case didSelectLogActivity
         case saveMood(String, Mood)
-        case completedSaveMood
+        case completedSaveMood(Mood)
         case failedToSaveMood
     }
     
@@ -44,7 +44,7 @@ struct MoodLogFeature {
                 return .run { send in
                     do {
                         try await networkClient.saveMood(assignmentId, mood)
-                        await send(.completedSaveMood)
+                        await send(.completedSaveMood(mood))
                     } catch {
                         await send(.failedToSaveMood)
                     }

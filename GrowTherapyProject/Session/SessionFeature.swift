@@ -29,7 +29,7 @@ struct SessionFeature {
         case beginSession
         case didSelectExitSession
         case timerTicked
-        case endSession
+        case endSession(Mood)
         case logMood
         case moodLog(PresentationAction<MoodLogFeature.Action>)
     }
@@ -72,8 +72,8 @@ struct SessionFeature {
                 state.moodLog = MoodLogFeature.State(assignmentId: state.assignmentId)
                 return .none
                 
-            case .moodLog(.presented(.completedSaveMood)):
-                return .send(.endSession)
+            case .moodLog(.presented(.completedSaveMood(let mood))):
+                return .send(.endSession(mood))
                 
             case .endSession:
                 return .none

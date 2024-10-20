@@ -25,15 +25,24 @@ class SessionManager {
     }
     
     func fetchSession(_ id: String) async throws -> Session {
-        return Session(id: id, therapistId: "", clientId: "")
+        let session = Session(id: id,
+                       timeStart: nil,
+                       dateCompleted: nil,
+                       duration: 0,
+                       therapistId: UUID().uuidString,
+                       clientId: UUID().uuidString,
+                       isTherapistInSession: true,
+                       isClientInSession: false)
+        self.session = session
+        return session
     }
     
     func observeSession(_ id: String) async throws -> Session {
         if let session = session {
             return session
         } else {
-            try await Task.sleep(for: .seconds(60))
-            return Session(id: id,
+            try await Task.sleep(for: .seconds(10))
+            let session = Session(id: id,
                            timeStart: nil,
                            dateCompleted: nil,
                            duration: 0,
@@ -41,6 +50,8 @@ class SessionManager {
                            clientId: UUID().uuidString,
                            isTherapistInSession: true,
                            isClientInSession: false)
+            self.session = session
+            return session
         }
     }
     

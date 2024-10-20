@@ -120,9 +120,9 @@ struct AssignmentFeature {
                     }
                 }
             
-            case .session(.endSession):
+            case .session(.endSession(let mood)):
                 //Here we would actually perform a refresh of tasks to get updated status for latest assignments if any
-                
+                state.assignment.cooldown = .init(isCompleted: true, log: mood)
                 let assignment = state.assignment
                 return .run { send in
                     do {

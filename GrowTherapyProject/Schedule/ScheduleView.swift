@@ -25,8 +25,8 @@ struct ScheduleView: View {
                         ForEach(viewStore.assignments) { assignment in
                             AssignmentRow(
                                 date: assignment.dateAssigned,
-                                status: assignmentStatus(isCompleted: assignment.isCompleted,
-                                                   isUnlocked: assignment.isScheduleUnlocked)) {
+                                status: assignmentStatus(isCompleted: assignment.isCompleted, isUnlocked: assignment.isScheduleUnlocked),
+                                mood: assignment.cooldown?.log) {
                                                        viewStore.send(.selectAssignment(assignment))
                                                    }
                                                    .disabled(!assignment.isScheduleUnlocked || assignment.isCompleted)
@@ -49,13 +49,14 @@ struct AssignmentRow: View {
    
     let date: Date
     let status: AssignmentStatus
+    let mood: Mood?
     let onSelect: () -> Void
     
     var body: some View {
         
         Button(action: onSelect, label: {
             HStack {
-                Text(assignmentDateDescription(isCompleted: status == .completed, date))
+                Text(assignmentDateDescription(isCompleted: status == .completed, mood: mood, date))
                     .foregroundStyle(assignmentTitleColor(status))
                     .padding(.horizontal)
                 Spacer()

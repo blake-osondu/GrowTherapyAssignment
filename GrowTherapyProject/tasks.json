@@ -65,7 +65,7 @@
             "sessionId": "6",
             "cooldown": {
                 "isCompleted": true,
-                "log": "sad"
+                "log": "frustrated"
             },
             "isCompleted": true
         },
@@ -79,7 +79,7 @@
             "sessionId": "7",
             "cooldown": {
                 "isCompleted": true,
-                "log": "sad"
+                "log": "content"
             },
             "isCompleted": true
         },
@@ -93,7 +93,7 @@
             "sessionId": "8",
             "cooldown": {
                 "isCompleted": true,
-                "log": "sad"
+                "log": "happy"
             },
             "isCompleted": true
         },

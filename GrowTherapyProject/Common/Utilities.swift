@@ -30,14 +30,14 @@ func assignmentStatusImage(_ status: AssignmentStatus) -> String {
     }
 }
 
-func assignmentDateDescription( isCompleted: Bool, _ date: Date) -> String {
+func assignmentDateDescription( isCompleted: Bool, mood: Mood?, _ date: Date) -> String {
     let components = Calendar.current.dateComponents([.month, .day], from: date)
 
     if let monthIndex = components.month, let day = components.day {
         let month = Calendar.current.monthSymbols[monthIndex-1]
         let dateDescription = "\(month) \(day)"
-        if isCompleted {
-            return "Completed (\(dateDescription))"
+        if isCompleted, let mood = mood {
+            return "\(mood.rawValue.capitalized) (\(dateDescription))"
         } else {
             return dateDescription
         }
