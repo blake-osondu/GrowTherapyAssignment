@@ -31,8 +31,7 @@ class SessionManager {
                        duration: 0,
                        therapistId: UUID().uuidString,
                        clientId: UUID().uuidString,
-                       isTherapistInSession: true,
-                       isClientInSession: false)
+                       isTherapistInSession: false)
         self.session = session
         return session
     }
@@ -48,8 +47,7 @@ class SessionManager {
                            duration: 0,
                            therapistId: UUID().uuidString,
                            clientId: UUID().uuidString,
-                           isTherapistInSession: true,
-                           isClientInSession: false)
+                           isTherapistInSession: true)
             self.session = session
             return session
         }

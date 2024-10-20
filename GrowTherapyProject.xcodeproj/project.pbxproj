@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DB53C7EA2CC47F8F00EB2458 /* MoodLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53C7E92CC47F8F00EB2458 /* MoodLogView.swift */; };
+		DB53C7EC2CC4B26600EB2458 /* tasks.json in Resources */ = {isa = PBXBuildFile; fileRef = DB53C7EB2CC4B26600EB2458 /* tasks.json */; };
+		DB53C7F32CC56EEC00EB2458 /* SessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53C7F22CC56EEC00EB2458 /* SessionClient.swift */; };
 		DB82FB8D2CC1486300364C2C /* GrowTherapyProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */; };
 		DB82FB912CC1486400364C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB82FB902CC1486400364C2C /* Assets.xcassets */; };
 		DB82FB942CC1486400364C2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB82FB932CC1486400364C2C /* Preview Assets.xcassets */; };
@@ -51,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		DB53C7E92CC47F8F00EB2458 /* MoodLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLogView.swift; sourceTree = "<group>"; };
+		DB53C7EB2CC4B26600EB2458 /* tasks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tasks.json; sourceTree = "<group>"; };
+		DB53C7F22CC56EEC00EB2458 /* SessionClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionClient.swift; sourceTree = "<group>"; };
 		DB82FB892CC1486300364C2C /* GrowTherapyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrowTherapyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectApp.swift; sourceTree = "<group>"; };
 		DB82FB902CC1486400364C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				DB82FBCC2CC1F81200364C2C /* NetworkClient.swift */,
+				DB53C7F22CC56EEC00EB2458 /* SessionClient.swift */,
 			);
 			path = Dependency;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 		DB82FB8B2CC1486300364C2C /* GrowTherapyProject */ = {
 			isa = PBXGroup;
 			children = (
+				DB53C7EB2CC4B26600EB2458 /* tasks.json */,
 				DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */,
 				DB53C7E72CC3E09F00EB2458 /* Dependency */,
 				DB82FBDE2CC36AAB00364C2C /* Schedule */,
@@ -350,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB53C7EC2CC4B26600EB2458 /* tasks.json in Resources */,
 				DB82FBD52CC2FA7500364C2C /* Launch Screen.storyboard in Resources */,
 				DB82FB942CC1486400364C2C /* Preview Assets.xcassets in Resources */,
 				DB82FB912CC1486400364C2C /* Assets.xcassets in Resources */,
@@ -383,6 +390,7 @@
 				DB82FBC52CC1F5D800364C2C /* WaitingRoomFeature.swift in Sources */,
 				DB82FBD12CC2AF4C00364C2C /* Utilities.swift in Sources */,
 				DB82FBDB2CC36A7200364C2C /* WaitingRoomView.swift in Sources */,
+				DB53C7F32CC56EEC00EB2458 /* SessionClient.swift in Sources */,
 				DB82FBC92CC1F5E700364C2C /* MoodLogFeature.swift in Sources */,
 				DB82FBD92CC306AA00364C2C /* SessionView.swift in Sources */,
 				DB53C7EA2CC47F8F00EB2458 /* MoodLogView.swift in Sources */,

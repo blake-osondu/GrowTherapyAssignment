@@ -52,8 +52,7 @@ struct SessionView: View {
                 duration: 0.0,
                 therapistId: "",
                 clientId: "",
-                isTherapistInSession: true,
-                isClientInSession: true)),
+                isTherapistInSession: true)),
         reducer: {
             SessionFeature()
                 .dependency(\.sessionClient, .testValue)

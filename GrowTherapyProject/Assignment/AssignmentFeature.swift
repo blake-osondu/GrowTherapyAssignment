@@ -35,6 +35,7 @@ struct AssignmentFeature {
         case failedToObserveSession
         case didFetchSession(Session)
         case joinSession(Session)
+        case beginExercise
     }
     
     @Dependency(\.networkClient) var networkClient
@@ -44,6 +45,20 @@ struct AssignmentFeature {
         Reduce { state, action in
             switch action {
             case .onAppear:
+                let id = state.assignment.id
+                return .run { send in
+                    do {
+                        let session = try await sessionClient.fetchSession(id)
+                        if session.isTherapistInSession {
+                            await send(.joinSession(session))
+                        } else {
+                            await send(.beginExercise)
+                        }
+                    } catch {
+                        await send(.beginExercise)
+                    }
+                }
+            case .beginExercise:
                 state.exercise = ExerciseFeature.State(exercise: state.assignment.exercise)
                 state.phase = .exercise
                 return .send(.observeSession)

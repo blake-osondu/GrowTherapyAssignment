@@ -93,9 +93,8 @@ struct Session: Codable, Equatable, Identifiable {
     var therapistId: String
     var clientId: String
     var isTherapistInSession: Bool = false
-    var isClientInSession: Bool = false
     
-    init(id: String, timeStart: Date? = nil, dateCompleted: Date? = nil, duration: TimeInterval = 0, therapistId: String, clientId: String, isTherapistInSession: Bool = false, isClientInSession: Bool = false) {
+    init(id: String, timeStart: Date? = nil, dateCompleted: Date? = nil, duration: TimeInterval = 0, therapistId: String, clientId: String, isTherapistInSession: Bool = false) {
         self.id = id
         self.timeStart = timeStart
         self.dateCompleted = dateCompleted
@@ -103,7 +102,6 @@ struct Session: Codable, Equatable, Identifiable {
         self.therapistId = therapistId
         self.clientId = clientId
         self.isTherapistInSession = isTherapistInSession
-        self.isClientInSession = isClientInSession
     }
     
     init(from decoder: any Decoder) throws {
@@ -121,7 +119,6 @@ struct Session: Codable, Equatable, Identifiable {
         self.therapistId = try container.decode(String.self, forKey: .therapistId)
         self.clientId = try container.decode(String.self, forKey: .clientId)
         self.isTherapistInSession = try container.decode(Bool.self, forKey: .isTherapistInSession)
-        self.isClientInSession = try container.decode(Bool.self, forKey: .isClientInSession)
     }
 }
 
