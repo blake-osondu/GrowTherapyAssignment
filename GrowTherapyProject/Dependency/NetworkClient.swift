@@ -11,7 +11,10 @@ import Dependencies
 
 struct NetworkClient {
     let fetchAssignments: @Sendable () async throws -> [Assignment]
-    let observeSession: @Sendable (String) async throws -> Session
+    let observeIsTherapistInSession: @Sendable (String) async throws -> Bool
+    let endSession: @Sendable (Session) async throws -> Void
+    let completeAssignment: @Sendable (Assignment) async throws -> Assignment
+    let saveMood: @Sendable (String, Mood) async throws -> Void
 }
 
 extension NetworkClient: DependencyKey {
@@ -19,19 +22,21 @@ extension NetworkClient: DependencyKey {
         fetchAssignments: {
             //Use URLSession to fetch assignments
             return []
-        }, observeSession: { sessionId in
+        }, observeIsTherapistInSession: { sessionId in
             //Use URLSession to observe change on backend session
-            
-            Session(id: sessionId, therapistId: "", clientId: "", therapistIsInMeeting: true)
+            false
+        }, endSession: { _ in
+            //Use URLsession to end session and update backend
+        }, completeAssignment: { assignment in
+            //Use URLSession to send assignment
+            return assignment
+        }, saveMood: { assignmentId, mood in
+            //Use URLSession to log mood on assignment
         })
 }
 
 extension NetworkClient: TestDependencyKey {
-    static var isTestValueSuccess: Bool = true
     static var testValue: NetworkClient = NetworkClient(fetchAssignments: {
-        guard isTestValueSuccess else {
-            throw NSError()
-        }
         return [
             Assignment(id: UUID().uuidString,
                  dateAssigned: Date().addingTimeInterval(3600 * 24 * 5),
@@ -65,7 +70,7 @@ extension NetworkClient: TestDependencyKey {
                                 clientId: UUID().uuidString)),
             Assignment(id: UUID().uuidString,
                  dateAssigned: Date(),
-                 exercise: .init(breathCountRequired: 12),
+                 exercise: .init(breathCountRequired: 3),
                  session: .init(id: UUID().uuidString,
                                 therapistId: UUID().uuidString,
                                 clientId: UUID().uuidString)),
@@ -92,11 +97,17 @@ extension NetworkClient: TestDependencyKey {
                  isCompleted: true)
             
         ]
-    }, observeSession:  { id in
+    }, observeIsTherapistInSession:  { id in
         _ = try await Task.sleep(nanoseconds: 10000)
         return try await withCheckedThrowingContinuation { continuation in
-            continuation.resume(with: .success(Session(id: "", therapistId: "", clientId: "", therapistIsInMeeting: true)))
+            continuation.resume(with: .success(true))
         }
+    }, endSession: { _ in
+        //We could throw an error for testing here
+    }, completeAssignment: { assignment in
+        Assignment(id: assignment.id, dateAssigned: assignment.dateAssigned, exercise: assignment.exercise, session: Session(id: assignment.session.id, therapistId: assignment.session.therapistId, clientId: assignment.session.clientId), isCompleted: true)
+    }, saveMood: { assignmentId, mood in
+        //Throw error if desired for testing
     })
 }
 

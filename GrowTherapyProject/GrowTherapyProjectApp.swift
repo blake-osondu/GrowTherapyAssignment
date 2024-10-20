@@ -12,7 +12,7 @@ struct GrowTherapyProjectApp: App {
     var body: some Scene {
         WindowGroup {
             ScheduleView(store: .init(initialState: ScheduleFeature.State(), reducer: {
-                ScheduleFeature()
+                ScheduleFeature().dependency(\.networkClient, .testValue)
             }))
         }
     }

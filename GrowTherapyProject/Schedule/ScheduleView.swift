@@ -29,6 +29,7 @@ struct ScheduleView: View {
                                                    isUnlocked: assignment.isScheduleUnlocked)) {
                                                        viewStore.send(.selectAssignment(assignment))
                                                    }
+                                                   .disabled(!assignment.isScheduleUnlocked || assignment.isCompleted)
                                                    .padding(.horizontal, 16)
                                                    .padding(.vertical, 2)
                         }
@@ -38,7 +39,8 @@ struct ScheduleView: View {
                     viewStore.send(.didAppear)
                 }
             }
-            
+        }.fullScreenCover(store: store.scope(state: \.$selectedAssignment, action: \.selectedAssignment)) { store in
+            AssignmentView(store: store)
         }
     }
 }
@@ -74,9 +76,8 @@ struct AssignmentRow: View {
             .init(
                 initialState: ScheduleFeature.State(),
                 reducer: {
-                    ScheduleFeature().dependency(\.networkClient, .testValue)
+                    ScheduleFeature()
+                        .dependency(\.networkClient, .testValue)
                 }))
     
 }
-
-#warning("Should the assignment be locked if it was scheduled in the past and was not completed. Should it even appear if it was in the past and not completed")

@@ -31,8 +31,11 @@ struct Breathwork: Equatable, Codable {
     var breathCountRequired: Int
 }
 
-enum Mood: Equatable, Codable {
+enum Mood: String, Equatable, Codable, CaseIterable, Identifiable {
     case happy, sad, content, angry, frustrated
+    var id: String {
+        rawValue
+    }
 }
 
 struct MoodLog: Equatable, Codable {

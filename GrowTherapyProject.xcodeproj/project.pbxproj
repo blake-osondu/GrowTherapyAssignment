@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB53C7EA2CC47F8F00EB2458 /* MoodLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB53C7E92CC47F8F00EB2458 /* MoodLogView.swift */; };
 		DB82FB8D2CC1486300364C2C /* GrowTherapyProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */; };
 		DB82FB912CC1486400364C2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB82FB902CC1486400364C2C /* Assets.xcassets */; };
 		DB82FB942CC1486400364C2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB82FB932CC1486400364C2C /* Preview Assets.xcassets */; };
@@ -19,11 +20,16 @@
 		DB82FBC32CC1F5CB00364C2C /* ExerciseFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBC22CC1F5CB00364C2C /* ExerciseFeature.swift */; };
 		DB82FBC52CC1F5D800364C2C /* WaitingRoomFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBC42CC1F5D800364C2C /* WaitingRoomFeature.swift */; };
 		DB82FBC92CC1F5E700364C2C /* MoodLogFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBC82CC1F5E700364C2C /* MoodLogFeature.swift */; };
-		DB82FBCB2CC1F6B400364C2C /* TaskFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBCA2CC1F6B400364C2C /* TaskFeature.swift */; };
+		DB82FBCB2CC1F6B400364C2C /* AssignmentFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBCA2CC1F6B400364C2C /* AssignmentFeature.swift */; };
 		DB82FBCD2CC1F81200364C2C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBCC2CC1F81200364C2C /* NetworkClient.swift */; };
 		DB82FBCF2CC2AF3F00364C2C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBCE2CC2AF3F00364C2C /* Models.swift */; };
 		DB82FBD12CC2AF4C00364C2C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBD02CC2AF4C00364C2C /* Utilities.swift */; };
 		DB82FBD32CC2AFF900364C2C /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBD22CC2AFF900364C2C /* ScheduleView.swift */; };
+		DB82FBD52CC2FA7500364C2C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB82FBD42CC2FA7500364C2C /* Launch Screen.storyboard */; };
+		DB82FBD72CC301B700364C2C /* AssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBD62CC301B700364C2C /* AssignmentView.swift */; };
+		DB82FBD92CC306AA00364C2C /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBD82CC306AA00364C2C /* SessionView.swift */; };
+		DB82FBDB2CC36A7200364C2C /* WaitingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBDA2CC36A7100364C2C /* WaitingRoomView.swift */; };
+		DB82FBDD2CC36A9200364C2C /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82FBDC2CC36A9200364C2C /* ExerciseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB53C7E92CC47F8F00EB2458 /* MoodLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLogView.swift; sourceTree = "<group>"; };
 		DB82FB892CC1486300364C2C /* GrowTherapyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrowTherapyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowTherapyProjectApp.swift; sourceTree = "<group>"; };
 		DB82FB902CC1486400364C2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,11 +66,16 @@
 		DB82FBC22CC1F5CB00364C2C /* ExerciseFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseFeature.swift; sourceTree = "<group>"; };
 		DB82FBC42CC1F5D800364C2C /* WaitingRoomFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomFeature.swift; sourceTree = "<group>"; };
 		DB82FBC82CC1F5E700364C2C /* MoodLogFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLogFeature.swift; sourceTree = "<group>"; };
-		DB82FBCA2CC1F6B400364C2C /* TaskFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFeature.swift; sourceTree = "<group>"; };
+		DB82FBCA2CC1F6B400364C2C /* AssignmentFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentFeature.swift; sourceTree = "<group>"; };
 		DB82FBCC2CC1F81200364C2C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		DB82FBCE2CC2AF3F00364C2C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		DB82FBD02CC2AF4C00364C2C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DB82FBD22CC2AFF900364C2C /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		DB82FBD42CC2FA7500364C2C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		DB82FBD62CC301B700364C2C /* AssignmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentView.swift; sourceTree = "<group>"; };
+		DB82FBD82CC306AA00364C2C /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		DB82FBDA2CC36A7100364C2C /* WaitingRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomView.swift; sourceTree = "<group>"; };
+		DB82FBDC2CC36A9200364C2C /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB53C7E42CC3E05000EB2458 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FBC22CC1F5CB00364C2C /* ExerciseFeature.swift */,
+				DB82FBDC2CC36A9200364C2C /* ExerciseView.swift */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		DB53C7E52CC3E06100EB2458 /* WaitingRoom */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FBC42CC1F5D800364C2C /* WaitingRoomFeature.swift */,
+				DB82FBDA2CC36A7100364C2C /* WaitingRoomView.swift */,
+			);
+			path = WaitingRoom;
+			sourceTree = "<group>";
+		};
+		DB53C7E62CC3E07500EB2458 /* MoodLog */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FBC82CC1F5E700364C2C /* MoodLogFeature.swift */,
+				DB53C7E92CC47F8F00EB2458 /* MoodLogView.swift */,
+			);
+			path = MoodLog;
+			sourceTree = "<group>";
+		};
+		DB53C7E72CC3E09F00EB2458 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FBCC2CC1F81200364C2C /* NetworkClient.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		DB53C7E82CC3E0F000EB2458 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FBCE2CC2AF3F00364C2C /* Models.swift */,
+				DB82FBD02CC2AF4C00364C2C /* Utilities.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		DB82FB802CC1486300364C2C = {
 			isa = PBXGroup;
 			children = (
@@ -116,16 +172,15 @@
 			isa = PBXGroup;
 			children = (
 				DB82FB8C2CC1486300364C2C /* GrowTherapyProjectApp.swift */,
-				DB82FBCC2CC1F81200364C2C /* NetworkClient.swift */,
-				DB82FBBA2CC14A9200364C2C /* ScheduleFeature.swift */,
-				DB82FBD22CC2AFF900364C2C /* ScheduleView.swift */,
-				DB82FBC02CC14DBE00364C2C /* SessionFeature.swift */,
-				DB82FBC22CC1F5CB00364C2C /* ExerciseFeature.swift */,
-				DB82FBC42CC1F5D800364C2C /* WaitingRoomFeature.swift */,
-				DB82FBCE2CC2AF3F00364C2C /* Models.swift */,
-				DB82FBC82CC1F5E700364C2C /* MoodLogFeature.swift */,
-				DB82FBCA2CC1F6B400364C2C /* TaskFeature.swift */,
-				DB82FBD02CC2AF4C00364C2C /* Utilities.swift */,
+				DB53C7E72CC3E09F00EB2458 /* Dependency */,
+				DB82FBDE2CC36AAB00364C2C /* Schedule */,
+				DBE603442CC36B6500C62FF1 /* Session */,
+				DBB9E9BD2CC36B1C00E5A628 /* Assignment */,
+				DB53C7E42CC3E05000EB2458 /* Exercise */,
+				DB53C7E52CC3E06100EB2458 /* WaitingRoom */,
+				DB53C7E82CC3E0F000EB2458 /* Common */,
+				DB53C7E62CC3E07500EB2458 /* MoodLog */,
+				DB82FBD42CC2FA7500364C2C /* Launch Screen.storyboard */,
 				DB82FB902CC1486400364C2C /* Assets.xcassets */,
 				DB82FB952CC1486400364C2C /* GrowTherapyProject.entitlements */,
 				DB82FB922CC1486400364C2C /* Preview Content */,
@@ -156,6 +211,33 @@
 				DB82FBAA2CC1486500364C2C /* GrowTherapyProjectUITestsLaunchTests.swift */,
 			);
 			path = GrowTherapyProjectUITests;
+			sourceTree = "<group>";
+		};
+		DB82FBDE2CC36AAB00364C2C /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FBBA2CC14A9200364C2C /* ScheduleFeature.swift */,
+				DB82FBD22CC2AFF900364C2C /* ScheduleView.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		DBB9E9BD2CC36B1C00E5A628 /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FBCA2CC1F6B400364C2C /* AssignmentFeature.swift */,
+				DB82FBD62CC301B700364C2C /* AssignmentView.swift */,
+			);
+			path = Assignment;
+			sourceTree = "<group>";
+		};
+		DBE603442CC36B6500C62FF1 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				DB82FBC02CC14DBE00364C2C /* SessionFeature.swift */,
+				DB82FBD82CC306AA00364C2C /* SessionView.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB82FBD52CC2FA7500364C2C /* Launch Screen.storyboard in Resources */,
 				DB82FB942CC1486400364C2C /* Preview Assets.xcassets in Resources */,
 				DB82FB912CC1486400364C2C /* Assets.xcassets in Resources */,
 			);
@@ -299,12 +382,17 @@
 				DB82FBC12CC14DBE00364C2C /* SessionFeature.swift in Sources */,
 				DB82FBC52CC1F5D800364C2C /* WaitingRoomFeature.swift in Sources */,
 				DB82FBD12CC2AF4C00364C2C /* Utilities.swift in Sources */,
+				DB82FBDB2CC36A7200364C2C /* WaitingRoomView.swift in Sources */,
 				DB82FBC92CC1F5E700364C2C /* MoodLogFeature.swift in Sources */,
+				DB82FBD92CC306AA00364C2C /* SessionView.swift in Sources */,
+				DB53C7EA2CC47F8F00EB2458 /* MoodLogView.swift in Sources */,
 				DB82FB8D2CC1486300364C2C /* GrowTherapyProjectApp.swift in Sources */,
+				DB82FBDD2CC36A9200364C2C /* ExerciseView.swift in Sources */,
+				DB82FBD72CC301B700364C2C /* AssignmentView.swift in Sources */,
 				DB82FBC32CC1F5CB00364C2C /* ExerciseFeature.swift in Sources */,
 				DB82FBBB2CC14A9200364C2C /* ScheduleFeature.swift in Sources */,
 				DB82FBD32CC2AFF900364C2C /* ScheduleView.swift in Sources */,
-				DB82FBCB2CC1F6B400364C2C /* TaskFeature.swift in Sources */,
+				DB82FBCB2CC1F6B400364C2C /* AssignmentFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +562,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -504,6 +594,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

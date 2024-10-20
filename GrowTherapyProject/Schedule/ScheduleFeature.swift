@@ -24,7 +24,7 @@ struct ScheduleFeature {
         case retrievedAssignments([Assignment])
         case failedToRetrieveAssignments
         case selectAssignment(Assignment)
-        case selectedAssignment(AssignmentFeature.Action)
+        case selectedAssignment(PresentationAction<AssignmentFeature.Action>)
     }
     
     @Dependency(\.networkClient) var networkClient
@@ -34,6 +34,7 @@ struct ScheduleFeature {
             switch action {
             case .didAppear:
                 return .send(.fetchAssignments)
+            
             case .fetchAssignments:
                 return .run { send in
                     do {
@@ -55,11 +56,19 @@ struct ScheduleFeature {
                 state.selectedAssignment = AssignmentFeature.State(assignment: assignment)
                 return .none
                 
+            case .selectedAssignment(.presented(.completedAssignment(let updatedAssignment))):
+                state.selectedAssignment = nil
+                state.assignments = state.assignments.map { assignment in
+                    assignment.id == updatedAssignment.id ? updatedAssignment : assignment
+                }
+                return .none
+                
             default:
                 return .none
             }
-        }.ifLet(\.selectedAssignment, action: \.selectedAssignment) {
+        }.ifLet(\.$selectedAssignment, action: \.selectedAssignment) {
             AssignmentFeature()
+                .dependency(\.networkClient, .testValue)
         }
     }
 }
