@@ -52,11 +52,11 @@ struct SessionView: View {
                 duration: 0.0,
                 therapistId: "",
                 clientId: "",
-                therapistIsInMeeting: true,
-                clientIsInMeeting: true)
-        ), reducer: {
+                isTherapistInSession: true,
+                isClientInSession: true)),
+        reducer: {
             SessionFeature()
-                .dependency(\.networkClient, .testValue)
+                .dependency(\.sessionClient, .testValue)
     }))
 }
 

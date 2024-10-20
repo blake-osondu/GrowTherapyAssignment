@@ -32,7 +32,7 @@ struct ExerciseFeature {
         var countDown: CountDown
         var inhale: Bool = false
         
-        init(exercise: Breathwork, isTherapistInSession: Bool, isExerciseInProgress: Bool = false) {
+        init(exercise: Breathwork = .init(breathCountRequired: 0), isTherapistInSession: Bool = false, isExerciseInProgress: Bool = false) {
             self.exercise = exercise
             self.isTherapistInSession = isTherapistInSession
             self.isExerciseInProgress = isExerciseInProgress
@@ -86,7 +86,7 @@ struct ExerciseFeature {
             case .exerciseComplete:
                 state.countDown.now = state.countDown.length
                 state.breathCount = state.exercise.breathCountRequired
-                state.exercise.dateCompleted = Date()
+                state.exercise.isCompleted = true
                 state.isExerciseInProgress = false
                 state.inhale = false
                 return .send(.waitForTherapist(state.exercise))

@@ -1,0 +1,115 @@
+{
+    "tasks": [
+        {
+            "id": "1",
+            "dateAssigned": 4,
+            "exercise": {
+                "isCompleted": false,
+                "breathCountRequired": 3
+            },
+            "sessionId": "1",
+            "cooldown": null,
+            "isCompleted": false
+        },
+        {
+            "id": "2",
+            "dateAssigned": 3,
+            "exercise": {
+                "isCompleted": false,
+                "breathCountRequired": 3
+            },
+            "sessionId": "2",
+            "cooldown": null,
+            "isCompleted": false
+        },
+        {
+            "id": "3",
+            "dateAssigned": 2,
+            "exercise": {
+                "isCompleted": false,
+                "breathCountRequired": 3
+            },
+            "sessionId": "3",
+            "cooldown": null,
+            "isCompleted": false
+        },
+        {
+            "id": "4",
+            "dateAssigned": 1,
+            "exercise": {
+                "isCompleted": false,
+                "breathCountRequired": 3
+            },
+            "sessionId": "4",
+            "cooldown": null,
+            "isCompleted": false
+        },
+        {
+            "id": "5",
+            "dateAssigned": 0,
+            "exercise": {
+                "isCompleted": false,
+                "breathCountRequired": 3
+            },
+            "sessionId": "5",
+            "cooldown": null,
+            "isCompleted": false
+        },
+        {
+            "id": "6",
+            "dateAssigned": -1,
+            "exercise": {
+                "isCompleted": true,
+                "breathCountRequired": 3
+            },
+            "sessionId": "6",
+            "cooldown": {
+                "isCompleted": true,
+                "log": "sad"
+            },
+            "isCompleted": true
+        },
+        {
+            "id": "7",
+            "dateAssigned": -2,
+            "exercise": {
+                "isCompleted": true,
+                "breathCountRequired": 3
+            },
+            "sessionId": "7",
+            "cooldown": {
+                "isCompleted": true,
+                "log": "sad"
+            },
+            "isCompleted": true
+        },
+        {
+            "id": "8",
+            "dateAssigned": -3,
+            "exercise": {
+                "isCompleted": true,
+                "breathCountRequired": 3
+            },
+            "sessionId": "8",
+            "cooldown": {
+                "isCompleted": true,
+                "log": "sad"
+            },
+            "isCompleted": true
+        },
+        {
+            "id": "9",
+            "dateAssigned": -4,
+            "exercise": {
+                "isCompleted": true,
+                "breathCountRequired": 3
+            },
+            "sessionId": "9",
+            "cooldown": {
+                "isCompleted": true,
+                "log": "sad"
+            },
+            "isCompleted": true
+        }
+    ]
+}

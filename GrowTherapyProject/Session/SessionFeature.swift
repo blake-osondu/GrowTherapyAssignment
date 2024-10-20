@@ -14,15 +14,15 @@ struct SessionFeature {
     
     @ObservableState
     struct State: Equatable {
-        var assignmentId: String
-        var session: Session
+        var assignmentId: String = ""
+        var session: Session = .init(id: "", therapistId: "", clientId: "")
         var duration: TimeInterval = 0
         var sessionIsInProgress: Bool = false
         @Presents var moodLog: MoodLogFeature.State?
     }
     
     @Dependency(\.continuousClock) var clock
-    @Dependency(\.networkClient) var networkClient
+    @Dependency(\.sessionClient) var sessionClient
     
     enum Action: Equatable {
         case onAppear
@@ -33,7 +33,6 @@ struct SessionFeature {
         case logMood
         case moodLog(PresentationAction<MoodLogFeature.Action>)
     }
-    
     
     var body: some Reducer<State,Action> {
         Reduce { state, action in
@@ -59,9 +58,10 @@ struct SessionFeature {
                 state.sessionIsInProgress = false
                 state.session.duration = state.duration
                 let finalSession = state.session
+                
                 return .run { send in
                     do {
-                        _ = try await networkClient.endSession(finalSession)
+                        _ = try await sessionClient.endSession(finalSession)
                         await send(.logMood)
                     } catch {
                         await send(.logMood)
@@ -84,7 +84,7 @@ struct SessionFeature {
             
         }.ifLet(\.$moodLog, action: \.moodLog) {
             MoodLogFeature()
-                .dependency(\.networkClient, .testValue)
+                .dependency(\.networkClient, .liveValue)
         }
     }
 }

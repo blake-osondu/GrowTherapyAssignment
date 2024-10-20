@@ -40,13 +40,13 @@ struct AssignmentView: View {
                 assignment: Assignment(id: "",
                                        dateAssigned: Date(),
                                        exercise: .init(breathCountRequired: 10),
-                                       session: Session(id: "",
-                                                        therapistId: "",
-                                                        clientId: "", therapistIsInMeeting: true),
+                                       sessionId: "",
                                        cooldown: nil,
                                        isCompleted: false)),
             reducer: {
                 AssignmentFeature()
+                    .dependency(\.networkClient, .testValue)
+                    .dependency(\.sessionClient, .testValue)
             })
     )
 }

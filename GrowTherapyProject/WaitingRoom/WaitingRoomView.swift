@@ -44,17 +44,14 @@ struct WaitingRoomView: View {
                             .multilineTextAlignment(.center)
                     }
                 }
-            }.onAppear {
-                viewStore.send(.onAppear)
             }
         }
     }
 }
 
 #Preview("Waiting Room") {
-    WaitingRoomView(store: .init(initialState: WaitRoomFeature.State(sessionId: UUID().uuidString, isTherapistInSession: false), reducer: {
+    WaitingRoomView(store: .init(initialState: WaitRoomFeature.State(isTherapistInSession: false), reducer: {
             WaitRoomFeature()
-            .dependency(\.networkClient, .testValue)
     }))
 }
 

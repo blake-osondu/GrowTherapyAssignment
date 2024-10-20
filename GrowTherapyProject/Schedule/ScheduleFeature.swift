@@ -68,7 +68,8 @@ struct ScheduleFeature {
             }
         }.ifLet(\.$selectedAssignment, action: \.selectedAssignment) {
             AssignmentFeature()
-                .dependency(\.networkClient, .testValue)
+                .dependency(\.networkClient, .liveValue)
+                .dependency(\.sessionClient, .liveValue)
         }
     }
 }

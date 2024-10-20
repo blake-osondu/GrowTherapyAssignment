@@ -12,7 +12,7 @@ func assignmentStatus(isCompleted: Bool, isUnlocked: Bool) -> AssignmentStatus {
     switch (isCompleted, isUnlocked) {
     case (true, _):
         return .completed
-    case (_, false):
+    case (false, false):
         return .notAvailable
     case (false, true):
         return .notCompleted
